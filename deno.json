@@ -1,4 +1,7 @@
 {
+	"imports": {
+		"himalaya": "npm:himalaya@^1.1"
+	},
 	"fmt": {
 		"useTabs": true,
 		"proseWrap": "never"

@@ -1,4 +1,4 @@
-import { parse, stringify } from "npm:himalaya";
+import { parse, stringify } from "himalaya";
 
 // Configuration options
 let port = 5200;
@@ -207,7 +207,7 @@ async function requestHandler(req: Request): Promise<Response> {
 			headers: reqHeaders,
 			body: ["GET", "HEAD"].includes(req.method) ? undefined : await req.blob(),
 		});
-	} catch (e) {
+	} catch (e: any) {
 		return new Response(generateErrorMessage(e), {
 			status: 400,
 			headers: { "content-type": "text/html" },
@@ -266,7 +266,7 @@ async function requestHandler(req: Request): Promise<Response> {
 Deno.serve({ port }, async (req) => {
 	try {
 		return await requestHandler(req);
-	} catch (e) {
+	} catch (e: any) {
 		let message = `Muffin batter was spilt while adding ${
 			URL.parse(req.url)?.pathname
 		}: ${e.message}`;
