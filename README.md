@@ -30,4 +30,4 @@ Navigate to `<scheme>://<host>:<port>/muffin_init` to configure the desired orig
 
 This work is licensed under the MIT license.
 
-Copyright © 2023 ninjadev64
+Copyright © 2023-2026 Aman Khanna (nekename)
